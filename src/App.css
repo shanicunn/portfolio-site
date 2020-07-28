@@ -1,38 +1,108 @@
+/* #241937 */
+/* #765EA0 */
+/* #B882AF */
+/* #C999B0 */
+/* #D4B6D4 */
+
+
 .App {
   text-align: center;
+  color: #241937;
+  font-family: 'Gayathri', sans-serif;
+  width: 90%;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.child {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav nav"
+    "about-services about-services"
+    "portfolio portfolio"
+    "footer footer"
+    ;
+    background-color: #B882AF
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header */
+.header {
+  background: #C33764;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  grid-area: header;
+  margin-top: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: #D4B6D4;
+  font-size: 60px;
+  height: 500px;
+  text-shadow: white 5px 1px 1px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  height: 450px;
+}
+/* Nav */
+.nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-area: nav;
+  justify-content: space-evenly;
+  color: #D4B6D4;
+  background: #241937;
 }
-
-.App-link {
-  color: #61dafb;
+.about-services {
+  grid-area: about-services;
+  display: grid;
+  grid-template-areas: "about-me services";
+  grid-auto-columns: 1fr 1fr;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* AboutMe */
+.about-me {
+  grid-area: about-me;
+  border-right: #765EA0 1px solid;
+}
+.about-me p {
+  text-shadow: white px -1px;
+}
+.image {
+  width: 300px;
+}
+/* Services */
+.services {
+  grid-area: services;
+  font-size: 40px;
+  
+}
+.services h2 {
+  text-shadow: white 2px 1px;
+}
+.services li {
+  text-shadow: white 1px 1px;
+}
+li {
+  list-style: none;
+}
+/* Portfolio */
+.portfolio {
+  grid-area: portfolio;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: #765EA0 1px solid;
+  padding: 40px;
+}
+.circle {
+  border-radius: 90px;
+  background-color: #C999B0 ;
+  width: 300px;
+  height: 200px;
+  border: #765EA0 1px solid;
+  box-shadow: white -1px -1px 1px;
+}
+/* Footer */
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+  background-color: #241937;
+  padding: 1%;
 }
